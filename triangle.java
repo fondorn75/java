@@ -11,9 +11,10 @@ public class triangle {
         nt.n = 10;
         nt.result = "";
         System.out.println(nt.numberTriangle());
+        String output = "n = " + nt.n + "\n" + nt.result;
         try (
                 FileWriter out = new FileWriter("triangle.txt", false)) {
-            out.write(nt.result);
+            out.write(output);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
