@@ -8,18 +8,13 @@ public class triangle {
     public static void main(String[] args) {
         number nt = new number();
         nt.temp = 0;
-        nt.n = 10;
+        nt.n = 12;
         nt.result = "";
         System.out.println(nt.numberTriangle());
         String output = "n = " + nt.n + "\n" + nt.result;
-        try (
-                FileWriter out = new FileWriter("triangle.txt", false)) {
-            out.write(output);
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-
-        }
+        nt.outputInFile(output);
+   
     }
 }
 
@@ -36,4 +31,15 @@ class number {
 
         return result;
     }
+    
+    public void outputInFile(String output) {
+        try (
+            FileWriter out = new FileWriter("triangle.txt", false)) {
+        out.write(output);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        
+    }
+    
 }
