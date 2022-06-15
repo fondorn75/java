@@ -166,6 +166,7 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
+out/
 
 # Publish Web Output
 *.[Pp]ublish.xml
@@ -294,6 +295,7 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+*.iml
 
 # CodeRush personal settings
 .cr/personal
