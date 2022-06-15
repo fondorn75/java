@@ -5,21 +5,22 @@ public class calculator {
     public static void main(String[] args) {
 
         calcNum cn = new calcNum();
-        Scanner in = new Scanner(System.in);
-        double temp = 0;
-        System.out.print("Input operand: ");
-        cn.operand = in.nextLine();
-        System.out.print("Input first number: ");
-        cn.num1 = in.nextDouble();
-        System.out.print("Input second number: ");
-        cn.num2 = in.nextDouble();
+        try (Scanner in = new Scanner(System.in)) {
+            double temp = 0;
+            System.out.print("Input operand: ");
+            cn.operand = in.nextLine();
+            System.out.print("Input first number: ");
+            cn.num1 = in.nextDouble();
+            System.out.print("Input second number: ");
+            cn.num2 = in.nextDouble();
 
-        temp = cn.calcResult(cn.num1, cn.num2, cn.operand);
+            temp = cn.calcResult(cn.num1, cn.num2, cn.operand);
 
-        String output = cn.num1 + " " + cn.operand + " " + cn.num2 + " = " + temp;
+            String output = cn.num1 + " " + cn.operand + " " + cn.num2 + " = " + temp;
 
-        System.out.println(output);
-        cn.writeInFile(output);
+            System.out.println(output);
+            cn.writeInFile(output);
+        }
     }
 }
 
