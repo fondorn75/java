@@ -69,6 +69,7 @@ class calcNum {
             } finally {
 
                 fw.flush();
+                fw.close();
 
             }
         } catch (Exception e) {
