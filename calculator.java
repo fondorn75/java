@@ -1,4 +1,5 @@
-import java.io.FileWriter;
+import java.io.File;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class calculator {
@@ -51,13 +52,28 @@ class calcNum {
     }
 
     void writeInFile(String output) {
-        try (
-                FileWriter out = new FileWriter("calc_log.txt", false)) {
-            out.write(output);
 
+        File file = new File("calc_log.txt");
+
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            PrintWriter out = new PrintWriter(file);
+
+            try {
+
+                out.append(output);
+
+            } finally {
+
+                out.close();
+
+            }
         } catch (Exception e) {
-            System.out.println(e.getMessage());
 
+            throw new RuntimeException(e);
         }
     }
 }
