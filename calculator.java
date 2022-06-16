@@ -1,5 +1,5 @@
 import java.io.File;
-import java.io.PrintWriter;
+import java.io.FileWriter;
 import java.util.Scanner;
 
 public class calculator {
@@ -60,15 +60,15 @@ class calcNum {
                 file.createNewFile();
             }
 
-            PrintWriter out = new PrintWriter(file);
+            FileWriter fw = new FileWriter(file, true);
 
             try {
 
-                out.append(output);
+                fw.append(output + "\n");
 
             } finally {
 
-                out.close();
+                fw.flush();
 
             }
         } catch (Exception e) {
