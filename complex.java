@@ -46,13 +46,13 @@ public class complex {
                 result = result_real + "+" + result_image + "i";
                 break;
             case "*":
-                result_real = real1 * real2;
-                result_image = image1 * image2;
+                result_real = real1 * real2 - image1 * image2;
+                result_image = real1 * image2 + real2 * image1;
                 result = result_real + "+" + result_image + "i";
                 break;
             case "/":
-                result_real = real1 / real2;
-                result_image = image1 / image2;
+                result_real = (real1 * real2 + image1 * image2) / (real1 * real1) + (image2 * image2);
+                result_image = (real2 * image1 - real1 * image2) / (real1 * real1) + (image2 * image2);
                 result = result_real + "+" + result_image + "i";
                 break;
         }
