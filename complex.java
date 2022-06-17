@@ -43,17 +43,17 @@ public class complex {
             case "-":
                 result_real = real1 - real2;
                 result_image = image1 - image2;
-                result = result_real + "-" + result_image + "i";
+                result = result_real + "+" + result_image + "i";
                 break;
             case "*":
                 result_real = real1 * real2;
                 result_image = image1 * image2;
-                result = result_real + "-" + result_image + "i";
+                result = result_real + "+" + result_image + "i";
                 break;
             case "/":
                 result_real = real1 / real2;
                 result_image = image1 / image2;
-                result = result_real + "-" + result_image + "i";
+                result = result_real + "+" + result_image + "i";
                 break;
         }
 
