@@ -12,7 +12,7 @@ public class calculator {
         String temp2 = "";
         
         try(Scanner start = new Scanner(System.in)){
-            System.out.print("Введите 1 для рациональныхчисел или 2 для комплексных: ");
+            System.out.print("Введите 1 для рациональных чисел или 2 для комплексных: ");
             typeCalc = Integer.parseInt(start.nextLine());
 
         if (typeCalc == 1) {
@@ -46,11 +46,11 @@ class calcNum {
     void numberInput(){
         try (Scanner in = new Scanner(System.in)) {
             
-            System.out.print("Input operand: ");
+            System.out.print("Введите знак операции: ");
             operand = in.nextLine();
-            System.out.print("Input first number: ");
+            System.out.print("Введите первое число: ");
             num1 = in.nextDouble();
-            System.out.print("Input second number: ");
+            System.out.print("Введите второе число: ");
             num2 = in.nextDouble();
         }
     }
@@ -160,6 +160,4 @@ class complexCalc{
 
         return result;
     }
-
-
 }
