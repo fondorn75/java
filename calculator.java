@@ -7,18 +7,15 @@ public class calculator {
 
         calcNum cn = new calcNum();
         complexCalc cc = new complexCalc();
+        int typeCalc = 0;
         double temp = 0;
         String temp2 = "";
-        String tipeCalc = "";
-
+        
         try(Scanner start = new Scanner(System.in)){
             System.out.print("Введите 1 для рациональныхчисел или 2 для комплексных: ");
-            tipeCalc = start.nextLine();
-        }
-        
+            typeCalc = Integer.parseInt(start.nextLine());
 
-        
-        if (tipeCalc == "1") {
+        if (typeCalc == 1) {
 
             cn.numberInput();
             temp = cn.calcResult(cn.num1, cn.num2, cn.operand);
@@ -26,7 +23,7 @@ public class calculator {
             System.out.println(output);
             cn.writeInFile(output);
             
-        } else if(tipeCalc == "2"){
+        } else{
 
             cc.complexNumberInput();
             temp2 = cc.complexCalcResult();
@@ -35,8 +32,7 @@ public class calculator {
             cn.writeInFile(output);
 
         }
-
-        
+        }
     }
 }
 
