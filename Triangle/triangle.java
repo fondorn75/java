@@ -1,3 +1,4 @@
+package Triangle;
 import java.io.FileWriter;
 
 /**

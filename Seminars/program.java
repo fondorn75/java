@@ -1,3 +1,4 @@
+package Seminars;
 import java.util.Scanner;
 
 /**
