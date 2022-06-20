@@ -11,9 +11,9 @@ class calcNum {
     double num1 = 0;
     double num2 = 0;
 
-    void numberInput(){
+    public void numberInput() {
         try (Scanner in = new Scanner(System.in)) {
-            
+
             System.out.print("Введите знак операции: ");
             operand = in.nextLine();
             System.out.print("Введите первое число: ");
@@ -42,9 +42,9 @@ class calcNum {
         return result;
     }
 
-    void writeInFile(String output) {
+    public void writeInFile(String output) {
 
-        File file = new File("calc_log.txt");
+        File file = new File("Calculator/calc_log.txt");
 
         try {
             if (!file.exists()) {

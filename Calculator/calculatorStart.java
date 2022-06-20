@@ -2,7 +2,7 @@ package Calculator;
 
 import java.util.Scanner;
 
-public class calculator {
+public class calculatorStart {
 
     public static void startCalc() {
 
@@ -21,7 +21,7 @@ public class calculator {
 
                 cn.numberInput();
                 temp = cn.calcResult(cn.num1, cn.num2, cn.operand);
-                output = String.format("%s %s % = %s", cn.num1, cn.operand, cn.num2, temp);
+                output = String.format("%s %s %s = %s", cn.num1, cn.operand, cn.num2, temp);
                 System.out.println(output);
                 cn.writeInFile(output);
 
