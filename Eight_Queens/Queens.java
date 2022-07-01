@@ -1,3 +1,5 @@
+package Eight_Queens;
+
 public class Queens {
     private int[] column; // Есть ли ферзь в том же столбце, 1 означает, что есть
     private int[] rup; // Есть ли ферзь сверху справа налево снизу
