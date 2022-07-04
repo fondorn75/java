@@ -1,44 +1,23 @@
 import java.util.Arrays;
 
 public class mergeSort {
-<<<<<<< HEAD
-    public static void main(String[] args) {
-        int[] array1 = { 8, 0, -3, 5, 6, 9, 8, -4, 2, -99, 43 };
-        int[] result = mergesort(array1);
-        System.out.println(Arrays.toString(result));
-    }
 
-=======
- 
->>>>>>> main
     public static int[] mergesort(int[] array1) {
         int[] buffer1 = Arrays.copyOf(array1, array1.length);
         int[] buffer2 = new int[array1.length];
         int[] result = mergesortInner(buffer1, buffer2, 0, array1.length);
         return result;
     }
-<<<<<<< HEAD
 
-=======
- 
->>>>>>> main
     public static int[] mergesortInner(int[] buffer1, int[] buffer2,
             int startIndex, int endIndex) {
         if (startIndex >= endIndex - 1) {
             return buffer1;
         }
-<<<<<<< HEAD
 
         int middle = startIndex + (endIndex - startIndex) / 2;
         int[] sorted1 = mergesortInner(buffer1, buffer2, startIndex, middle);
         int[] sorted2 = mergesortInner(buffer1, buffer2, middle, endIndex);
-=======
-        
-        int middle = startIndex + (endIndex - startIndex) / 2;
-        int[] sorted1 = mergesortInner(buffer1, buffer2, startIndex, middle);
-        int[] sorted2 = mergesortInner(buffer1, buffer2, middle, endIndex);
-        
->>>>>>> main
 
         int index1 = startIndex;
         int index2 = middle;
